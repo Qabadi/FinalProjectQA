@@ -1,0 +1,29 @@
+<div id="menuBar" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/dashboard']" aria-label="Go to Dashboard">Dashboard</a></li>
+        <li><a [routerLink]="['/summary']" aria-label="Go to Summary">Summary</a></li>
+        <li><a [routerLink]="['/reports']" aria-label="Go to Reports">Reports</a></li>
+        <li><a [routerLink]="['/']" aria-label="Logout">Logout</a></li>
+    </ul>
+</div>
+<article id="graphReport" class="reports">
+    <h1>Doughnut Chart</h1>
+    <p>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </p>
+    <div id="chartInfo">
+            <p>
+                The chart provides a breakdown of the estimated construction timelines for three innovative projects. 
+                Solar-powered trains are expected to take between <strong>5 to 10 years</strong> to complete, depending on 
+                various factors such as technology development and infrastructure readiness. Bladeless wind energy, a 
+                cutting-edge renewable energy solution, has a longer timeline, with an estimated construction period of 
+                <strong>8 to 16 years</strong>, due to the complexity and scale of the project. Lastly, rechargeable tires, 
+                a groundbreaking advancement in sustainable transportation, are expected to be developed in approximately 
+                <strong>7 to 15 years</strong>, as it involves both automotive and tire manufacturing innovations. These timelines 
+                highlight the varying levels of complexity and research required to bring these transformative ideas to life.
+            </p>
+        
+    </div>
+</article>
+
+

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'pb-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-test';
+
+  authService = inject(AuthService);
+
+  constructor(){
+    this.authService.login({
+      username: 'Quatoria',
+      password: 'Quatoria'
+    }).subscribe((r) => {
+      console.log(r);
+    });
+  }
 }

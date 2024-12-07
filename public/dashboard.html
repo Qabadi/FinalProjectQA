@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q04-Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div id="menuBar">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="summary.html">Summary</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div id="energy">
+        <h1>Recent Innovations in Clean Energy</h1>
+        <div class="para1" id="solar">
+            <h2>Solar-Powered Trains</h2>
+            <p>Solar energy is a great way of keeping energy clean and preventing the complete
+                </br>collapse of our atmosphere through the nasty and dirty air we alow to infiltrate
+                </br>our ozone. This is a form of transportation that can go all day without the use
+                </br>of coal or electricity. Trains usually emit a lot of air pollution so the invention of
+                </br>solar-powered trains will be better as it will take energy directly from the sun to stay powered.
+            </p>
+
+        </div>
+
+        <div class="para2" id="blade">
+            <h2>Bladeless Wind Energy</h2>
+            <p>We are used to seeing spining blades when seeing different wind turbines, but how about a wind
+                </br>turbine that doesn't use spinning blades, but does the exact same job? The reason why this
+                </br>would be incredibly useful is due to the fact that it will be effecient in low winds as they will
+                </br>be able to operate with littel to no wind. This will also allow the communities to
+                </br>generate renewable energy directly.
+            </p>
+        </div>
+
+        <div class="para3" id="tires">
+            <h2>"Rechargable" Tires</h2>
+            <p>Rechargable tires are extremely useful as they are trying to be made as a very adaptable
+                </br>way to meet all mobility needs for every individual. This an invention being created by Goodyear
+                </br>for electric vehicles to etend the life span of tires. The idea that Goodyear is looking at is
+                </br>a tire that adapts to different changes in the weather and road conditions. This change would be
+                </br>safe for the environemt as Goodyear is looking to have the tires "created from a biological
+                substance
+                </br>and strengthened with fibres modelled with one of nature’s strongest substances, spider silk". This
+                </br>invention will make the tires completely biodegradable.
+            </p>
+        </div>
+
+        <div class="para4" id="conclusion">
+            <p>
+                All in all, these are the latest inventions revolutionizing the world of clean energy.
+                </br>Each innovation, from solar-powered trains to bladeless wind energy and rechargeable tires,
+                represents a significant step toward reducing our dependence on non-renewable energy sources.
+                </br>These technologies not only aim to minimize environmental impact but also promote sustainability by
+                harnessing renewable resources in creative and efficient ways.
+                </br>As we continue to explore and develop these groundbreaking solutions, we are paving the way for a
+                cleaner, greener future that benefits both the planet and future generations.
+            </p>
+            <p>
+                <b>For more details on sustainable energy technologies, visit the article: </b>
+                <a href="https://knowhow.distrelec.com/energy-and-power/top-10-innovative-technologies-in-sustainable-energy-sector/#:~:text=Carbon%20Nanotubes.%20Students%20from%20the%20Massachusetts%20Institute,electricity%20by%20absorbing%20energy%20from%20its%20surroundings."
+                    target="_blank">
+                    Top 10 Innovative Technologies in the Sustainable Energy Sector
+                </a>.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="stack">
+        <h2>This is the <bold>Tech Stack</bold> of my project</h2>
+
+    </div>
+
+</body>
+
+<script>
+    function isTokenExpired(token) {
+        try {
+            const payload = JSON.parse(atob(token.split('.')[1])); // Decode the JWT payload
+            const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds
+            return payload.exp < currentTime; // Check if the token is expired
+        } catch (e) {
+            console.error("Error decoding token:", e);
+            return true; // Treat errors as an expired token
+        }
+    }
+
+    function userAuth() {
+        const token = localStorage.getItem('jwt');
+        if (!token || isTokenExpired(token)) {
+            console.log("Redirecting to login page due to invalid or expired token.");
+            window.location.href = 'index.html'; // Redirect to login
+        }
+    }
+
+
+    userAuth(); // Run the authentication check on page load
+</script>
+
+</html>

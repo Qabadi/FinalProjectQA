@@ -1,0 +1,203 @@
+/* main.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container Styling */
+.intro {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+.intro h1 {
+    font-size: 3.3em;
+    color: #1f3a1b;
+    margin-bottom: 15px;
+}
+
+.intro h3 {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.userInput form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Submit Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f3a1b;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0e4a16;
+    color: #ffffff;
+}
+
+
+
+#menuBar {
+    background-color: #1f3a1b;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#menuBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#menuBar ul li {
+    padding: 14px 20px;
+}
+
+#menuBar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#menuBar ul li a:hover {
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+#menuBar ul li a.active {
+    background-color: #555;
+    color: white;
+    border-radius: 4px;
+}
+
+body {
+    padding-top: 60px;
+}
+
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 60px;
+}
+
+/* Article container styling specifically for the chart */
+#graphReport {
+    width: 100%; /* Full width of the screen */
+    max-width: 800px; /* Limits the width of the article */
+    margin: 40px auto; /* Centers the article horizontally */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+/* Heading styling for the chart */
+#graphReport h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Centering the canvas (chart) and restricting its size */
+#graphReport canvas {
+    display: block;
+    margin: 0 auto; /* Centers the canvas horizontally */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%; /* Ensures the canvas fits inside its container */
+    max-width: 400px; /* Restricts the width of the chart */
+    height: 400px; /* Fixes the height of the chart */
+}
+
+/* Explanation box below the chart */
+#graphReport #chartInfo {
+    margin-top: 20px; /* Adds space between chart and explanation */
+    padding-top: 20px; /* Padding inside the explanation box */
+    border-top: 2px solid #0e4a16; /* Blue line separating the chart and explanation */
+    text-align: left; /* Align explanation text to the left */
+}
+
+/* Paragraph inside the explanation box */
+#graphReport #chartInfo p {
+    font-size: 16px;
+    line-height: 1.8; /* Improves readability */
+    color: #4a4a4a;
+    margin: 0;
+}
+
+/* Strong text inside the explanation box for emphasis */
+#graphReport #chartInfo p strong {
+    color: #27ae60;
+    font-weight: bold;
+}
+

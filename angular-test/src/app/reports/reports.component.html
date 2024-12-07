@@ -1,0 +1,26 @@
+<div id="menuBar" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/dashboard']" aria-label="Go to Dashboard">Dashboard</a></li>
+        <li><a [routerLink]="['/summary']" aria-label="Go to Summary">Summary</a></li>
+        <li><a [routerLink]="['/reports']" aria-label="Go to Reports">Reports</a></li>
+        <li><a [routerLink]="['/']" aria-label="Logout">Logout</a></li>
+    </ul>
+</div>
+
+<article id="graphReport" class="reports">
+    <h1>Pie Chart</h1>
+    <p>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </p>
+    <div id="chartInfo">
+        <p>
+            The chart provides a breakdown of construction costs for three innovative projects. 
+            Solar-powered trains account for a significant portion, with a construction cost of 
+            <strong>100 million dollars</strong>. Bladeless wind energy, a cutting-edge renewable energy 
+            solution, is the most cost-efficient at <strong>50 million dollars</strong>. Lastly, rechargeable 
+            tires, representing a groundbreaking advancement in sustainable transportation, have the 
+            highest construction cost at <strong>200 million dollars</strong>. This data highlights the varying 
+            financial commitments required to bring these transformative ideas to life.
+        </p>
+    </div>
+</article>
